@@ -31,7 +31,7 @@ class FoglalasiRendszer:
 
         lemondando = None
         for foglalas in self.foglalasok:
-            if foglalas.jarat.jaratszam == jaratszam and foglalas.datum == datum_obj:
+            if foglalas.jarat == jarat and foglalas.datum == datum_obj:
                 lemondando = foglalas
                 break
 
