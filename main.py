@@ -25,7 +25,7 @@ def main():
     rendszer.foglalas_letrehozas(barcelonai_jarat.jaratszam, "2025-07-06")
 
     while True:
-        print("--- Menü ---")
+        print("\n--- Menü ---")
         print("1. Járatok listázása")
         print("2. Foglalások listázása")
         print("3. Jegy foglalása")
