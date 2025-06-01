@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime, date
 
 from Jarat import Jarat
 
@@ -15,10 +15,10 @@ class JegyFoglalas:
     @datum.setter
     def datum(self, datum: str):
         try:
-            datum_obj = datetime.datetime.strptime(datum, "%Y-%m-%d").date()
+            datum_obj = datetime.strptime(datum, "%Y-%m-%d").date()
         except ValueError:
             raise ValueError("A dátum formátuma helytelen. (Helyes: ÉÉÉÉ-HH-NN)")
-        if datum_obj < datetime.date.today():
+        if datum_obj < date.today():
             raise ValueError("A foglalás dátuma nem lehet múltbeli.")
         self._datum = datum_obj
 
